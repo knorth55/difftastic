@@ -54,7 +54,7 @@ extern "C" {
     fn tree_sitter_elixir() -> ts::Language;
     fn tree_sitter_go() -> ts::Language;
     fn tree_sitter_hack() -> ts::Language;
-    fn tree_sitter_haskell() -> ts::Language;
+    // fn tree_sitter_haskell() -> ts::Language;
     fn tree_sitter_java() -> ts::Language;
     fn tree_sitter_javascript() -> ts::Language;
     fn tree_sitter_json() -> ts::Language;
@@ -254,20 +254,20 @@ pub fn from_language(language: guess::Language) -> TreeSitterConfig {
                 highlight_query: ts::Query::new(language, query).unwrap(),
             }
         }
-        Haskell => {
-            let language = unsafe { tree_sitter_haskell() };
-            TreeSitterConfig {
-                name: "Haskell",
-                language,
-                atom_nodes: (vec![]).into_iter().collect(),
-                delimiter_tokens: (vec![("[", "]"), ("(", ")")]),
-                highlight_query: ts::Query::new(
-                    language,
-                    include_str!("../vendor/highlights/haskell.scm"),
-                )
-                .unwrap(),
-            }
-        }
+        // Haskell => {
+        //     let language = unsafe { tree_sitter_haskell() };
+        //     TreeSitterConfig {
+        //         name: "Haskell",
+        //         language,
+        //         atom_nodes: (vec![]).into_iter().collect(),
+        //         delimiter_tokens: (vec![("[", "]"), ("(", ")")]),
+        //         highlight_query: ts::Query::new(
+        //             language,
+        //             include_str!("../vendor/highlights/haskell.scm"),
+        //         )
+        //         .unwrap(),
+        //     }
+        // }
         Java => {
             let language = unsafe { tree_sitter_java() };
             TreeSitterConfig {

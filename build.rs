@@ -109,11 +109,11 @@ fn main() {
             src_dir: "vendor/tree-sitter-hack-src",
             extra_files: vec!["scanner.cc"],
         },
-        TreeSitterParser {
-            name: "tree-sitter-haskell",
-            src_dir: "vendor/tree-sitter-haskell-src",
-            extra_files: vec!["scanner.cc"],
-        },
+        // TreeSitterParser {
+        //     name: "tree-sitter-haskell",
+        //     src_dir: "vendor/tree-sitter-haskell-src",
+        //     extra_files: vec!["scanner.cc"],
+        // },
         TreeSitterParser {
             name: "tree-sitter-java",
             src_dir: "vendor/tree-sitter-java-src",
