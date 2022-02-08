@@ -74,7 +74,7 @@ fn from_shebang(src: &str) -> Option<Language> {
                         return Some(Bash)
                     }
                     "tcc" => return Some(C),
-                    "lisp" | "sbc" | "ccl" | "clisp" | "ecl" => return Some(CommonLisp),
+                    "euslisp" | "irteus" | "roseus" | "lisp" | "sbc" | "ccl" | "clisp" | "ecl" => return Some(CommonLisp),
                     "elixir" => return Some(Elixir),
                     // "runghc" | "runhaskell" | "runhugs" => return Some(Haskell),
                     "hhvm" => return Some(Hack),
@@ -131,7 +131,7 @@ fn from_extension(extension: &OsStr) -> Option<Language> {
         "bb" | "boot" | "clj" | "cljc" | "clje" | "cljs" | "cljx" | "edn" | "joke" | "joker" => {
             Some(Clojure)
         }
-        "lisp" | "lsp" | "asd" => Some(CommonLisp),
+        "l" | "lisp" | "lsp" | "asd" => Some(CommonLisp),
         "cs" => Some(CSharp),
         "css" => Some(Css),
         "el" => Some(EmacsLisp),
